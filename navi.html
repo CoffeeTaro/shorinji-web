@@ -1,0 +1,132 @@
+<!-- idがsmartのものはスマートフォン用サイトのみに表示される。 idがpcのものはパソコン用サイトのみに表示される-->
+<img id="smart" src="images/smart_title.png" alt="電気通信大学 少林寺拳法部 公式サイト" width=100% >
+<img id="pc" src="images/title.png" alt="電気通信大学 少林寺拳法部 公式サイト" width=100% >
+
+<!-- SlickNav -->
+<link rel="stylesheet" href="SlickNav/slicknav.css" />
+<script src="SlickNav/jquery.slicknav.min.js"></script>
+<script>
+$(function(){
+    $('#menu').slicknav();
+});
+</script>
+
+<script type='text/javascript'>
+var timeout = 500;
+var closetimer = 0;
+var ddmenuitem = 0;
+
+function jsddm_open(){
+    jsddm_canceltimer();
+    jsddm_close();
+    ddmenuitem = $(this).find('ul').eq(0).css('visibility', 'visible');
+}
+
+function jsddm_close(){   
+    if(ddmenuitem) ddmenuitem.css('visibility', 'hidden');
+}
+
+function jsddm_timer(){
+    closetimer = window.setTimeout(jsddm_close, timeout);
+}
+
+function jsddm_canceltimer(){
+    if(closetimer){
+        window.clearTimeout(closetimer);
+        closetimer = null;
+    }
+}
+
+$(document).ready(function(){
+    $('#jsddm > li').bind('mouseover', jsddm_open);
+    $('#jsddm > li').bind('mouseout',  jsddm_timer);
+});
+
+document.onclick = jsddm_close;
+</script>
+
+<div id="smart">
+<div id="container">
+<nav id='navi'>
+    <ul id='menu' class="clearfix">
+        <li><a href='index.php'>ホーム</a>
+            <ul class="sub-menu">
+                <li><a href='index.php'>ホーム</a></li>
+                <li><a href='index.php#p11'>初めてご覧になる方へ</a></li>
+                <li><a href='index.php#p12'>新入部員募集中!!!</a></li>
+                <li><a href='index.php#p13'>メールアドレス</a></li>
+                <li><a href='index.php#p14'>更新履歴</a></li>
+            </ul>
+        </li>
+
+        <li><a href='point.php'>少林寺拳法とは</a>
+            <ul class="sub-menu">
+                <li><a href='point.php'>少林寺拳法とは</a>
+                <li><a href='point.php#p21'>ここがポイント</a></li>
+            </ul>
+        </li>
+
+        <li><a href='for_newcomers.php'>新入生へ</a>
+            <ul class="sub-menu">
+                <li><a href='for_newcomers.php'>新入生へ</a></li>
+                <li><a href='for_newcomers.php#p31'>少林寺拳法に興味のある新入生へ</a></li>
+                <li><a href='for_newcomers.php#p32'>メンバー</a></li>
+                <li><a href='for_newcomers.php#p33'>活動日時</a></li>
+                <li><a href='for_newcomers.php#p34'>年間予定</a></li>
+                <li><a href='for_newcomers.php#p35'>活動場所</a></li>
+            </ul>
+        </li>
+        <li><a href='event.php'>イベント</a>
+            <ul class="sub-menu">
+                <li><a href='event.php'>イベント</a>
+                <li><a href='event.php#p41'>調布祭</a></li>
+                <li><a href='event.php#p42'>合宿</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+</div>
+
+</div>
+
+<!-- PC用サイトのナビゲーション -->
+<div id="pc">
+<nav id='menu'>
+    <ul id='jsddm'>
+        <li><a href='index.php'>ホーム</a>
+            <ul>
+                <li><a href='index.php#p11'>初めてご覧になる方へ</a></li>
+                <li><a href='index.php#p12'>新入部員募集中!!!</a></li>
+                <li><a href='index.php#p13'>メールアドレス</a></li>
+                <li><a href='index.php#p14'>更新履歴</a></li>
+            </ul>
+        </li>
+
+        <li><a href='point.php'>少林寺拳法とは</a>
+            <ul>
+                <li><a href='point.php#p21'>ここがポイント</a></li>
+            </ul>
+        </li>
+
+        <li><a href='for_newcomers.php'>新入生へ</a>
+            <ul>
+                <li><a href='for_newcomers.php#p31'>少林寺拳法に興味のある新入生へ</a></li>
+                <li><a href='for_newcomers.php#p32'>メンバー</a></li>
+                <li><a href='for_newcomers.php#p33'>活動日時</a></li>
+                <li><a href='for_newcomers.php#p34'>年間予定</a></li>
+                <li><a href='for_newcomers.php#p35'>活動場所</a></li>
+            </ul>
+        </li>
+        <li><a href='event.php'>イベント</a>
+            <ul>
+                <li><a href='event.php#p41'>調布祭</a></li>
+                <li><a href='event.php#p42'>合宿</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+</div>
+<div id="pc">
+<br>
+</div>
+
