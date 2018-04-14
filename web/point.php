@@ -1,8 +1,13 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-{% include head.html %}
+<?php
+/*
+ * ヘッダの読み込み
+ */
 
+include 'head.html';
+?>
 <title>少林寺拳法とは</title>
 </head>
 <body>
@@ -11,7 +16,16 @@
 
 <header>
 
-{% include navi.html %}
+<!-- ナビゲーション -->
+<?php
+/*
+ * ナビゲーションを呼び出す
+ * ナビゲーションの内容を変更したければnavi.htmlを変更してください
+ *
+ */
+
+include 'navi.html';
+?>
 
 </header>
 
@@ -82,9 +96,20 @@
 </section>
 </main>
 
-{% include subframe.html %}
+<?php
+/*
+ * サブフレームを呼び出す
+ * サブフレームの内容を変更したければsubframe.htmlを変更してください
+ *
+ */
 
-{% include footer.html %}
+include 'subframe.html';
+
+?>
+<?php
+    //copyrightの挿入
+    include 'footer.html';
+?>
 
 </div>
 </div>

@@ -1,8 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-{% include head.html %}
+<?php
+/*
+ * ヘッダの読み込み
+ */
 
+include 'head.html';
+?>
 <title>新入生へ</title>
 
 </head>
@@ -14,7 +19,15 @@
 <header>
 
 <!-- ナビゲーション -->
-{% include navi.html %}
+<?php
+/*
+ * ナビゲーションを呼び出す
+ * ナビゲーションの内容を変更したければnavi.htmlを変更してください
+ *
+ */
+
+include 'navi.html';
+?>
 
 </header>
 
@@ -73,7 +86,7 @@
 </p>
 <br>
 <br>
-
+<!-- ここに年間予定の表を挿入 -->
 <h2 id="p34">年間予定</h2>
 <table border="1">
 <tr><th>月</th><th>行事</th></tr>
@@ -101,12 +114,24 @@
 <img src="images/uec-map.gif" width=100%  />
 <br>
 
-{% include subframe.html %}
-</main>
 
+</main>
+<?php
+/*
+ * サブフレームを呼び出す
+ * サブフレームの内容を変更したければsubframe.htmlを変更してください
+ *
+ */
+
+include 'subframe.html';
+
+?>
 <br>
 
-{% include footer.html %}
+<?php
+	//copyrightの挿入
+	include 'footer.html';
+?>
 
 </div>
 </div>
